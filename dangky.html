@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Đăng ký tham gia CLB</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body id="top">
+  <header class="site-header">
+    <div class="page-banner signup-banner">
+      <div class="banner-inner">
+        <p class="banner-badge">📝 Form đăng ký</p>
+        <h1>Đăng ký tham gia CLB Ngoại Khóa</h1>
+        <p class="banner-sub">
+          Trường THPT Nguyễn Đình Chiểu — Bến Tre
+        </p>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html">Trang chủ</a>
+      <a href="thethao.html">CLB Thể Thao</a>
+      <a href="thiennguyen.html">CLB Thiện nguyện</a>
+      <a href="truyenthong.html">CLB Truyền thông</a>
+      <a href="thanhtich.html">Thành tích</a>
+      <a href="dangky.html" class="active">Đăng ký</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="form-card form-modern">
+      <div class="form-head">
+        <h2>Thông tin đăng ký</h2>
+        <p class="form-note">
+          Vui lòng điền đầy đủ thông tin. Ban chủ nhiệm CLB sẽ liên hệ xác nhận.
+        </p>
+      </div>
+
+      <!-- ✅ FormSubmit gửi mail tới Gmail -->
+      <form id="signupForm" class="signup-form"
+        action="https://formsubmit.co/toanhieu3010@gmail.com"
+        method="POST">
+
+        <!-- FormSubmit config -->
+        <input type="hidden" name="_subject" value="Đơn đăng ký CLB Ngoại Khóa - THPT Nguyễn Đình Chiểu">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+
+        <!-- Nếu muốn sau khi gửi xong chuyển trang -->
+        <!-- <input type="hidden" name="_next" value="https://your-site/success.html"> -->
+
+        <div class="grid-2">
+          <div class="form-group">
+            <label for="hoten">Họ và tên <span class="req">*</span></label>
+            <input type="text" id="hoten" name="Họ tên" required placeholder="Ví dụ: Nguyễn Văn A">
+          </div>
+
+          <div class="form-group">
+            <label for="lop">Lớp <span class="req">*</span></label>
+            <input type="text" id="lop" name="Lớp" required placeholder="Ví dụ: 12A1">
+          </div>
+
+          <div class="form-group">
+            <label for="ngaysinh">Ngày sinh <span class="req">*</span></label>
+            <input type="date" id="ngaysinh" name="Ngày sinh" required>
+            <small class="help">👉 Nhấn vào biểu tượng lịch để chọn ngày (tránh gõ tay).</small>
+          </div>
+
+          <div class="form-group">
+            <label for="gioitinh">Giới tính <span class="req">*</span></label>
+            <select id="gioitinh" name="Giới tính" required>
+              <option value="" selected disabled>-- Chọn --</option>
+              <option>Nam</option>
+              <option>Nữ</option>
+              <option>Khác</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="sdt">Số điện thoại <span class="req">*</span></label>
+            <input type="tel" id="sdt" name="SĐT" required placeholder="09xxxxxxxx"
+              pattern="[0-9]{9,11}" title="Số điện thoại gồm 9-11 chữ số">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email (nếu có)</label>
+            <input type="email" id="email" name="Email" placeholder="ten@gmail.com">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="clb">CLB muốn tham gia <span class="req">*</span></label>
+          <select id="clb" name="CLB đăng ký" required>
+            <option value="" selected disabled>-- Chọn CLB --</option>
+            <option value="CLB Thể thao">CLB Thể thao</option>
+            <option value="CLB Thiện nguyện">CLB Thiện nguyện</option>
+            <option value="CLB Truyền thông">CLB Truyền thông</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Kỹ năng / sở trường</label>
+          <div class="check-grid">
+            <label><input type="checkbox" name="Kỹ năng" value="Lãnh đạo - tổ chức"> Lãnh đạo - tổ chức</label>
+            <label><input type="checkbox" name="Kỹ năng" value="Thuyết trình"> Thuyết trình</label>
+            <label><input type="checkbox" name="Kỹ năng" value="Viết nội dung"> Viết nội dung</label>
+            <label><input type="checkbox" name="Kỹ năng" value="Thiết kế"> Thiết kế</label>
+            <label><input type="checkbox" name="Kỹ năng" value="Chụp ảnh / quay video"> Chụp ảnh / quay video</label>
+            <label><input type="checkbox" name="Kỹ năng" value="Thể thao"> Thể thao</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="lydo">Lý do muốn tham gia <span class="req">*</span></label>
+          <textarea id="lydo" name="Lý do" rows="4" required
+            placeholder="Ví dụ: Em muốn rèn kỹ năng teamwork, giao tiếp..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="agree">
+            <input type="checkbox" required>
+            Em cam kết thông tin trên là đúng và sẽ tham gia hoạt động nghiêm túc. <span class="req">*</span>
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Gửi đơn đăng ký</button>
+          <button type="reset" class="btn ghost">Nhập lại</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- ✅ POPUP THÀNH CÔNG -->
+  <div class="modal" id="successModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-icon">✅</div>
+      <h3>Đã gửi đơn thành công!</h3>
+      <p>
+        Cảm ơn bạn đã đăng ký tham gia CLB Ngoại Khóa.
+        Ban chủ nhiệm sẽ liên hệ sớm để xác nhận.
+      </p>
+      <button class="btn primary" id="closeModal">Đóng</button>
+    </div>
+  </div>
+
+  <a class="scroll-top" href="#top" title="Lên đầu trang">↑</a>
+
+  <footer class="site-footer new-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>CLB Ngoại Khóa</h3>
+        <p class="footer-desc">
+          Website giới thiệu các CLB ngoại khóa trường THPT Nguyễn Đình Chiểu.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Liên kết nhanh</h4>
+        <div class="footer-links-grid">
+          <a href="index.html">🏠 Trang chủ</a>
+          <a href="thethao.html">🏀 CLB Thể thao</a>
+          <a href="thiennguyen.html">❤️ CLB Thiện nguyện</a>
+          <a href="truyenthong.html">📸 CLB Truyền thông</a>
+          <a href="thanhtich.html">🏆 Thành tích</a>
+          <a href="dangky.html">📝 Đăng ký</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Liên hệ</h4>
+        <div class="footer-contact">
+          <p>📍 THPT Nguyễn Đình Chiểu, Bến Tre</p>
+          <p>✉️ thptnguyendinhchieu@bentre.edu.vn</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 CLB Ngoại Khóa – Trường THPT Nguyễn Đình Chiểu</p>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById("signupForm");
+    const modal = document.getElementById("successModal");
+    const closeBtn = document.getElementById("closeModal");
+
+    function openModal(){
+      modal.classList.add("show");
+      modal.setAttribute("aria-hidden", "false");
+    }
+
+    function closeModal(){
+      modal.classList.remove("show");
+      modal.setAttribute("aria-hidden", "true");
+    }
+
+    closeBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => {
+      if(e.target === modal) closeModal();
+    });
+
+    form.addEventListener("submit", async function(e){
+      e.preventDefault();
+
+      // ✅ Fix/check ngày sinh
+      const birth = document.getElementById("ngaysinh").value;
+      if(!birth){
+        alert("Vui lòng chọn ngày sinh.");
+        return;
+      }
+
+      // ✅ Gửi form bằng fetch để không bị redirect ngay
+      const formData = new FormData(form);
+
+      try{
+        const res = await fetch(form.action, {
+          method: "POST",
+          body: formData
+        });
+
+        if(res.ok){
+          form.reset();
+          openModal();
+        }else{
+          alert("Gửi đơn chưa thành công. Vui lòng thử lại.");
+        }
+      }catch(err){
+        alert("Không thể gửi (có thể do mạng). Vui lòng thử lại.");
+      }
+    });
+  </script>
+</body>
+</html>
